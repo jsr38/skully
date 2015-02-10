@@ -1,0 +1,15 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Delete Selected Vertices"/>
+ <filter name="Delete Selected Vertices"/>
+ <filter name="Remove Isolated pieces (wrt Diameter)">
+  <Param tooltip="Delete all the connected components (floating pieces) with a diameter smaller than the specified one" description="Enter max diameter of isolated pieces" type="RichAbsPerc" value="3.3301" min="0" name="MinComponentDiag" max="333.007"/>
+ </filter>
+ <filter name="Laplacian Smooth">
+  <Param tooltip="The number of times that the whole algorithm (normal smoothing + vertex fitting) is iterated." description="Smoothing steps" type="RichInt" value="1" name="stepSmoothNum"/>
+  <Param tooltip="If true the boundary edges are smoothed only by themselves (e.g. the polyline forming the boundary of the mesh is independently smoothed). Can reduce the shrinking on the border but can have strange effects on very small boundaries." description="1D Boundary Smoothing" type="RichBool" value="true" name="Boundary"/>
+  <Param tooltip="If true the cotangente weighting scheme is computed for the averaging of the position. Otherwise (false) the simpler umbrella scheme (1 if the edge is present) is used." description="Cotangent weighting" type="RichBool" value="true" name="cotangentWeight"/>
+  <Param tooltip="If checked the filter is performed only on the selected faces" description="Affect only selected faces" type="RichBool" value="true" name="Selected"/>
+ </filter>
+ <filter name="Remove Faces from Non Manifold Edges"/>
+</FilterScript>
